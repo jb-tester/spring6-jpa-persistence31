@@ -15,7 +15,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class RunMe {
     public static void main(String[] args) {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(MyConfig.class);
-        DatesAndNumbersService service= ctx.getBean(DatesAndNumbersService.class);
+        DatesAndNumbersService service = ctx.getBean(DatesAndNumbersService.class);
         System.out.println("====== findAll()");
         for (DatesAndNumbers datesAndNumbers : service.listAll()) {
             System.out.println(datesAndNumbers);
@@ -39,22 +39,29 @@ public class RunMe {
         System.out.println("====== exp()");
         for (DatesAndNumbers datesAndNumbers : service.qwe5()) {
             System.out.println(datesAndNumbers);
-        } System.out.println("====== floor()");
+        }
+        System.out.println("====== floor()");
         for (DatesAndNumbers datesAndNumbers : service.qwe6()) {
             System.out.println(datesAndNumbers);
-        } System.out.println("====== ln()");
+        }
+        System.out.println("====== ln()");
         for (DatesAndNumbers datesAndNumbers : service.qwe7()) {
             System.out.println(datesAndNumbers);
-        } System.out.println("====== power()");
+        }
+        System.out.println("====== power()");
         for (DatesAndNumbers datesAndNumbers : service.qwe8()) {
             System.out.println(datesAndNumbers);
-        } System.out.println("====== round()");
+        }
+        System.out.println("====== round()");
         for (DatesAndNumbers datesAndNumbers : service.qwe9()) {
             System.out.println(datesAndNumbers);
-        } System.out.println("====== sign()");
+        }
+        System.out.println("====== sign()");
         for (DatesAndNumbers datesAndNumbers : service.qwe10()) {
             System.out.println(datesAndNumbers);
         }
+        System.out.println("====== coalesce()");
+        System.out.println(service.qwe11());
     }
 
 }

@@ -57,4 +57,5 @@ public class DatesAndNumbersService {
     public List<DatesAndNumbers> qwe10(){
         return datesNumsRepo.query10();
     }
+    public Integer qwe11(){return datesNumsRepo.query11(1000);}
 }

@@ -46,4 +46,7 @@ public interface DatesNumsRepo extends CrudRepository<DatesAndNumbers,Integer> {
     @Query("select d from DatesAndNumbers d where sign(d.floatTwo) = -1 ")
     List<DatesAndNumbers> query10();
 
+    @Query("select SUM(d.secondNum) from DatesAndNumbers d where coalesce(:foo, d.firstNum) > coalesce(d.floatTwo, d.floatOne)")
+    Integer query11(@Param("foo") Integer foo);
+
 }
